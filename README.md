@@ -9,6 +9,9 @@ Remember one thing `*BE CURIOUS*`
 - [Need?](#need)
 - [History](#history)
 - [JS on Server](./jsOnServer.md)
+- [Start Writing Code](./startWritingCode.md)
+
+
 ## **What?**
 
 - Node.js is an `open-source`, `cross-platform`, `JavaScript runtime environment` that executes JavaScript code outside a web browser.
