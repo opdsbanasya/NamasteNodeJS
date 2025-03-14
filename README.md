@@ -8,3 +8,4 @@ Remember one thing `*BE CURIOUS*`
 - [Introduction to Node.js](./Episode%201%20to%203/inroductionToNodejs.md)
 - [JS on Server](./Episode%201%20to%203/jsOnServer.md)
 - [Start Writing Code](./Episode%201%20to%203/startWritingCode.md)
+- [`module.exports` and `require()`](./Episode%204/README.md)
