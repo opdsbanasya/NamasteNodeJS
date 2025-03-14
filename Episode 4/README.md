@@ -74,9 +74,9 @@ Module is a collection of JavaScript code which is private iteself. It can be sh
     - **module**: It is a global object which is available in every module. It contains information about the current module like **path**, **filename**, **exports** etc.
     - **module.exports**: It is empty object there you can export functions, variables or objects.
 
-## CommonJS module (cjs) VS ES6 module (ejs)
-- **CommonJS module (cjs)**: It uses `module.exports` to export functions, variables or objects and `require` to import them. These are enabled by default in Node.js. 
-- **ES6 module (ejs)**: It is used in browser. It uses `export` to export functions, variables or objects and `import` to import them. To enable it in Node.js, you need to use `type="module"` in `package.json` file.
+## CommonJS module (CJS) VS ES6 module (ESM/MJS)
+- **CommonJS module (CJS)**: It uses `module.exports` to export functions, variables or objects and `require` to import them. These are enabled by default in Node.js. 
+- **ES6 module (ESM)**: It is used in browser. It uses `export` to export functions, variables or objects and `import` to import them. To enable it in Node.js, you need to use `type="module"` in `package.json` file.
 ```json
 {
     "type": "module"
@@ -109,7 +109,7 @@ Module is a collection of JavaScript code which is private iteself. It can be sh
 
 ### Difference 
 
-| **CommonJS Module (CJS)** | **ES Module(EJS)** |
+| **CommonJS Module (CJS)** | **ES Module(MJS/ESM)** |
 | --- | --- |
 | `module.exports` and `require()` | `export` and `import` |
 | Enabled by default in Node.js | Enabled by using `type="module"` in `package.json` |
