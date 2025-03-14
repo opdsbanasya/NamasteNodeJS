@@ -1,16 +1,19 @@
 console.log("executed");
 
-export function calculateSum(a, b){
-    return a+b;
+function calculateSum(a, b) {
+  return a + b;
 }
 
-export var name = "Lenovo";
+var name = "Lenovo";
 
 // When you have a single function or variable
-// module.exports = calculateSum; 
+// module.exports = calculateSum;
 
 //* When you have multiple functions and variables
 // module.exports = {
 //     name: name,
 //     calculateSum: calculateSum
 // };
+
+// also you can export like
+// export { name, calculateSum };
