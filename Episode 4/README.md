@@ -70,6 +70,9 @@ Module is a collection of JavaScript code which is private iteself. It can be sh
     - Module protects their functions and vars to avoid confilcts with other function and variable.
     - It also helps to avoid the overwriting of functions and variables.
 
+- **What inside module and module.exports?**
+    - **module**: It is a global object which is available in every module. It contains information about the current module like **path**, **filename**, **exports** etc.
+    - **module.exports**: It is empty object there you can export functions, variables or objects.
 
 ## CommonJS module (cjs) VS ES6 module (ejs)
 - **CommonJS module (cjs)**: It uses `module.exports` to export functions, variables or objects and `require` to import them. These are enabled by default in Node.js. 
@@ -103,3 +106,65 @@ Module is a collection of JavaScript code which is private iteself. It can be sh
     console.log(ans);
     console.log(name);
     ```
+
+### Difference 
+
+| **CommonJS Module (CJS)** | **ES Module(EJS)** |
+| --- | --- |
+| `module.exports` and `require()` | `export` and `import` |
+| Enabled by default in Node.js | Enabled by using `type="module"` in `package.json` |
+| Used in `Node.js` | Used in `React.js`, `Angular.js`, etc. |
+| Used in Industry | Starndard |
+| Syncronous | Asyncronous |
+| Code run in non-strict mode | in strict mode |
+| Ex.: `z = 10` run without error | Ex.: `z = 10` throw error |
+
+
+## Module folder structure
+- **Problem**: let you have multiple modules and you want to keep them in a separate folder. How you can do this?
+- **Solution**: Create a folder and move all modules. Now create a `index.js` module which will import all modules and export them. Now you can import all modules using `require` or `import`.
+- Let you have `sum.js` and `mutiply.js`
+    - Create `calculation` folder, move [sum.js](./calculation/sum2.js) and [multiply.js](./calculation/multiply.js) inside it.
+    - **index.js**: 
+    ```js
+    const calculateSum2  = require("./sum2.js");
+    const multiply = require("./multiply.js");
+
+    module.exports = { calculateSum2, multiply };
+    ```
+
+    - **app.js**: There `./calculation` is denotes the folder where `index.js` is located, you not need to write `index.js`.
+    ```js
+    const { calculateSum2, multiply } = require("./calculation")
+    console.log("Sum 2 is: ", calculateSum2(21, 125));
+    console.log("Multi is: ", multiply(50, 20));
+    ```
+
+### Why we follow this structure?
+- We follow this structure to keep our code clean, organized and group all related modules in a single folder.
+- Suppose you use these modules in **app.js** with a long path in require, but **app.js** don't need to understood file structure of your module.
+
+### Importing a JSON file
+You can import a json file by:
+```js
+const data = require("./data.json");
+
+console.log(data);
+```
+
+## Built in modules in Node.js
+- **util**: The util module is a core module in Node.js that provides a variety of utility functions for debugging, formatting, and working with objects. Utility functions are internal tools used to maintain and debug code.
+    - **Example**:
+    ```js
+    const util = require("node:util");
+    // or
+    const util2 = require("util");
+    ```
+    - **util.format()**: It is used to format a string. It takes a string and arguments and returns a formatted string.
+    ```js
+    var txt = 'Congratulate %s on his %dth birthday!';
+    var result = util.format(txt, 'Linus', 6);
+
+    console.log(result);
+    ```
+
