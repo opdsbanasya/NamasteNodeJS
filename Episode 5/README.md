@@ -56,6 +56,9 @@ This is happen because Node.js wrap code into IIFE, and in JS, you can't access 
 
 ### How do you accessed module.exports?
 When module code wrapped inside IIFE, there module object is **passed as parameter to IIFE**, and `require` function is also passed as parameter to IIFE. So, you can access module.exports from module object.
+
+![node](./node.png)
+
 - *See below code*
     ```js
     (function (exports, require, module, __filename, __dirname) {
