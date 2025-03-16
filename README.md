@@ -9,3 +9,5 @@ Remember one thing `*BE CURIOUS*`
 - [JS on Server](./Episode%201%20to%203/jsOnServer.md)
 - [Start Writing Code](./Episode%201%20to%203/startWritingCode.md)
 - [`module.exports` and `require()`](./Episode%204/README.md)
+- [Diving deep into node git repo](./Episode%205/README.md)
+- [libuv and async I/O](./Episode%206/README.md)
