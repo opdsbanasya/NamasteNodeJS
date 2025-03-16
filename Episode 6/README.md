@@ -19,7 +19,7 @@
 - Let it get multiple requests at the same time. How will it handle them? Will there block these requests?
 - To understand this, need to understand synchronous and asynchronous.
 
-## Syncronous and Asynchronous
+## Synchronous and Asynchronous
 ### Example
 - Suppose you running a Restraurant, and you have a counter for order. There are 3 items in menu: **Coke**, **Pizza**, and **Noodles**.
 - Let there following time taken by each item to prepare:
@@ -34,7 +34,7 @@
   - **Person E**: Pizza
 
 ### Synchronous
-- Let you running in syncronous way.
+- Let you running in synchronous way.
 - Here is the order of serving:
   - **Person A**: Coke
     - Time taken: 0 minute
@@ -65,27 +65,27 @@
 
 - After these suppose another peple join queue, then they have to wait a long time to get their order.
 
-### Asyncronous
-- Let you running in asyncronous way.
+### Asynchronous
+- Let you running in asynchronous way.
 - There each people order and gone out from queue to waiting area. 
 - Here is the order of serving:
-  - Person A: Coke
+  - **Person A**: Coke
     - Time taken: 0 minute
     - Waiting time: 0 minute
     - Took and gone out from queue after 0 minute
-  - Person B: Pizza
+  - **Person B**: Pizza
     - Time taken: 10 minutes
     - Waiting time: 10 minutes
     - Gone out from queue after 10 minutes
-  - Person C: Noodle
+  - **Person C**: Noodle
     - Time taken: 5 minutes
     - Waiting time: 5 minutes
     - Gone out from queue after 5 minutes
-  - Peason D: Coke
+  - **Peason D**: Coke
     - Time taken: 0 minute
     - Waiting time: 0 minute
     - Gone out from queue after 0 minute
-  - Person E: Noodle
+  - **Person E**: Noodle
     - Time taken: 5 minutes
     - Waiting time: 5 minutes
     - Gone out from queue after 5 minutes
@@ -97,18 +97,18 @@
 ![Async Example](./images/async-ex.png)
 
 ### Conclusion
-| Syncronous | Asyncronous |
+| **Synchronous** | **Asynchronous** |
 | --- | --- |
 | Code quickely executes | Code take some time to executes |
 | Blocking operation | Non-Blocking opearation |
 | Not good for I/O operations | Good for I/O operations |
-| JS is syncronous | Node.js is asyncronous |
+| JS is synchronous | Node.js is asynchronous |
 | Ex. `var name = "Rahul"` | Ex. `fs.readFile('file.txt', function(err, data) {})` |
 
-### Syncronous and Asynchronous Code
+### Synchronous and Asynchronous Code
 ![Sync and Async Code](./images/sync-async-code.png)
 
-### How syncrounous code is executed?
+### How is synchronous code executed?
 In JS engine following componet is responsible for executing the code:
 - **Callstack**: JS engine have a Callstack that running on a single thread.
 - **Memory Heap**: There also a Memory Heap that allocate memory to variables and functions.
@@ -118,7 +118,7 @@ In JS engine following componet is responsible for executing the code:
 
 ![Sync Code Execution](./images/sync-code-execution.png)
 
-### How asyncronous code is executed?
+### How asynchronous code is executed?
 - JS engine does not know how to wait, it not have the concept of timer. But with Node.js, it work and wait to complete the task. This is possible because Node.js give some superpowers to JS engine.
 
 ![Async Code Execution](./images/async-code-execution.png)
@@ -128,7 +128,7 @@ In JS engine following componet is responsible for executing the code:
 
 ![libuv](./images/libuv2.png)
 
-- JS engine offloads all asyncronous task to libuv.
+- JS engine offloads all asynchronous task to libuv.
 
 ![jsengine](./images/jsengine-offloads.png)
 
