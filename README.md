@@ -11,3 +11,4 @@ Remember one thing `*BE CURIOUS*`
 - [`module.exports` and `require()`](./Episode%204/README.md)
 - [Diving deep into node git repo](./Episode%205/README.md)
 - [libuv and async I/O](./Episode%206/README.md)
+- [sync, async, and setTimeoutZero](./Episode%207/README.md)
