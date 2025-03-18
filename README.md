@@ -2,7 +2,7 @@
 
 # **Namaste Node JS 🚀🚀🚀**
 
-Remember one thing `*BE CURIOUS*`
+Remember one thing **`BE CURIOUS`**
 
 # Table of Content
 - [Introduction to Node.js](./Episode%201%20to%203/inroductionToNodejs.md)
