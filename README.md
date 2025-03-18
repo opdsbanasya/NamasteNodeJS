@@ -12,3 +12,4 @@ Remember one thing `*BE CURIOUS*`
 - [Diving deep into node git repo](./Episode%205/README.md)
 - [libuv and async I/O](./Episode%206/README.md)
 - [sync, async, and setTimeoutZero](./Episode%207/README.md)
+- [Diving deep into V8 engine](./Episode%208/README.md)
