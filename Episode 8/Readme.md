@@ -34,7 +34,6 @@ Suppose you have a JS code, when this code given to V8, There are saveral steps 
 2. **JIT Compilation**: 
     - In V8 engine, there is the **Igition interpreter**. AST given to Ignition that convert AST into byte code. one's code has been converted into byte code, execution starts of byte code.
     - In V8 engine, there is also **Turbofan Compiler**. If there a portion of code that executed again and again, means code that used multiple time, it can be a function that called again and again. Ignition gives this code to Turbofan, so that turbofan can compile and optimize the code. So when it executes next time, we can get result very fast.
-    - Diagram
     - This type of code known as hot code, and this process known as optimization.
     - **Optimization**: Turbofan compile to hot code, so after compilation, it can run fast and Turbifan optimise to machine code. Now it again executed fast.
     - **Deoptimization**: In this process, there are chances to deoptimize the code.
