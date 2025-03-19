@@ -13,3 +13,4 @@ Remember one thing **`BE CURIOUS`**!
 - [libuv and async I/O](./Episode%206/README.md)
 - [sync, async, and setTimeoutZero](./Episode%207/README.md)
 - [Diving deep into V8 engine](./Episode%208/README.md)
+- [Diving deep into libuv](./Episode%209/README.md)
