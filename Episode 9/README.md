@@ -117,4 +117,21 @@ File read.
     - *Explanation*:
       - At inner `nextTick`, there is a file reading opearation that take some time to read file, so even loop goes to next phase that is Check phase and there is a inner `setImmediate`, so it executed first. then inner `setTimeout` and then again file reading operation.
 
+### Other 2 phases of Event loop
+There are 2 more phases of event loop between timer and poll phase:
+#### 1. Pending Callback Phase
+- Executed I/O callbacks deferred to the next loop iteration.
+- Suppose over there for any reason these I/O callnacks can be deferred into next loop event cycle.
+- So, suppose if there is some error, or you want to retry something, or there can be recursive callback, but there is a limit of recursive callbacks, to reduce starvation some time we defer these callbacks to the next loop iteration.
+- **1 Tick = one cycle of event loop**
 
+#### 2. **Idle, Prepare Phase**
+It only used internally, we as a developer don't have to worry about it.
+
+#### before going to poll phase
+- Before going to poll phase, it actually calculate, what is the timer of `setTimeout` and `setInterval` that need to executes, if it take 5 sec, then event loop waits in poll phase till 5 sec, and after it move next to execute time queue and come back again into poll phase.
+
+## Resources
+- [Event loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
+- [I/O loop](https://docs.libuv.org/en/v1.x/loop.html)
+- [Event loop Code](https://github.com/libuv/libuv/blob/v1.x/src/unix/core.c#L427)
