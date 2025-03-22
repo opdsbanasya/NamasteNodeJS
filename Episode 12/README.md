@@ -72,7 +72,31 @@ Each type of database is designed to handle a different kind of data or a differ
     - Multi-model Store: OrientDB, ArangoDB
 - There `NoSQL` mean Not Only SQL, which means that they are not limited to the SQL language and can support other query languages as well.
 ### MongoDB
-- MongoDB was created by `10gent` in 2007.
+- MongoDB was created by `10gent` in 2007, which is now known as `MongoDB Inc`.
 - It is an open-source document-oriented database that is designed for ease of use and scalability.
 - It is work well with JSON data.
-- 
+- `MongoDB` name is derived from the word `humongous`, which means extremely large.
+- MongoDB can store large amounts of data and is highly scalable, meaning it can handle large amounts of data and traffic.
+- **Why MongoDB?**
+    - Flexible 
+    - Compatible with JS stack
+    - Easy to learn
+    - Scalable
+    - Increase developer productivity
+    - Store documents in a JSON-like format
+
+## RDBMS vs NoSQL
+
+![RDBMS vs NoSQL](./rdbms%20vs%20nosql.png)
+
+| **RDBMS** | **NoSQL** |
+| --- | --- |
+| Table, Rows, Columns | Collection, Document, Fiels |
+| Structured Data | Un-structured Data |
+| Fixed Schema | Flexible Schema |
+| SQL | Mongo(MQL), Neo4j(cypher) |
+| Tough to horizontally scale | Easy to scale(horizontal + vertical) |
+| Relationship -> Foreign Key, Joins | Nested Documents |
+| Read-heavy apps, Transaction workloads | Real-time analytics, Distributed Computing |
+| MySQL, PostgreSQL | MongoDB, CouchDB |
+| Ex. Banking, E-commerce | Ex. Social Media, IoT |
