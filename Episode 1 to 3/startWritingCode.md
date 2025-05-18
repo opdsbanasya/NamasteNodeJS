@@ -44,7 +44,7 @@ Hello Sanjay Kumar
     console.log(window); // It will print the window object
     console.log(this); // It will print the window object
     ```
-   - Read More about (`this` keyword)[https://www.freecodecamp.org/news/the-javascript-this-keyword-explained-with-examples/]
+   - Read More about [`this` keyword](https://www.freecodecamp.org/news/the-javascript-this-keyword-explained-with-examples/)
    
 2. **Global Object in Node.js**:
    - In Node.js, the global object is named `global`. Unlike browsers, Node.js does not have a `window` object.
