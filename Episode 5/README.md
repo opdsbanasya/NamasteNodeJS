@@ -1,8 +1,8 @@
-# Episode 5
+# Episode-05 | Diving into the NodeJS github repo
 
 ## Problems
 
-### Why we can't access variables and functions directly from a module?
+### 1. Why we can't access variables and functions directly from a module?
 **Ans.**: In JavaScript, functions have thier scope and their variables can't be accessed from outside of the function.
 ```js
 function foo() {
@@ -13,14 +13,14 @@ console.log(a); // ReferenceError: a is not defined
 ```
 Modules work same waay as functions. Whenever you create a module in Node.js, code that you write inside the module is wrapped inside function and then executed. This is why you can't access variables and functions directly from a module.
 
-### Whenever a module is require, What happen behind the scene?
+### 2. Whenever a module is require, What happen behind the scene?
 **Ans.**: Whenever you require a module, Node.js took the code from file and **wrap code into a function and then execute**, so it not intefere with other code.
 - **factorial.js**
     ```js
     function factorial(n) {
-    if (n == 0 || n == 1) return 1;
+        if (n == 0 || n == 1) return 1;
 
-    return n * factorial(n - 1);
+        return n * factorial(n - 1);
     }
 
     module.exports = { factorial };
@@ -47,14 +47,21 @@ Modules work same waay as functions. Whenever you create a module in Node.js, co
     })(exports, require, module, __filename, __dirname);
     ```
 
-### Need of IIFE
+#### Need of IIFE
 - Immediately invokes code.
 - Keeps variables and functions safe.
 
-### How are variables and functions are private in different modules?
+### 3. How are variables and functions are private in different modules?
 This is happen because Node.js wrap code into IIFE, and in JS, you can't access variables and functions from outside of the function.
+```js
+function foo() {
+    var a = 10;
+    console.log(a); // 10
+}
+console.log(a); // ReferenceError: a is not defined
+```
 
-### How do you accessed module.exports?
+### 4. How do you accessed module.exports?
 When module code wrapped inside IIFE, there module object is **passed as parameter to IIFE**, and `require` function is also passed as parameter to IIFE. So, you can access module.exports from module object.
 
 ![node](./node.png)

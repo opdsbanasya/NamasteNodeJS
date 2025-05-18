@@ -1,4 +1,4 @@
-# Start Writing Code
+# Episode-03 | Let's write code
 
 There are 2 ways to write code in Node.js:
 - Node REPL (Read-Eval-Print-Loop)

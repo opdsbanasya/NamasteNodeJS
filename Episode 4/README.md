@@ -14,157 +14,233 @@ Module is a collection of JavaScript code which is private iteself. It can be sh
 - **Problem**: let you have a function `calculateSum()` to sum 2 numbers inside `sum.js` module. Now you want to use this function inside `app.js`, but you can't use `calculateSum()` directly in `app.js`. The code will run but here can't access **functions**, **variables** or **objects** of another module beacuse modules protect their **functions** and **variables** to leak.
 
 - **`module.exports`**: To use functions and variables, you need to export these functions and variables and also import them in another module. There is `module.exports` which is used to export functions, variables or objects from one module to another module and `require` is used to import them.
-- **Example**: 
-    - **sum.js**
+- **Example**:
 
-    ```js
-    function calculateSum(a, b) {
-        console.log(a + b);
-    }
+  - **sum.js**
 
-    module.exports = calculateSum;
-    ```
+  ```js
+  function calculateSum(a, b) {
+    console.log(a + b);
+  }
 
-    - **app.js**:
-    ```js
-    const calculateSum = require("./sum.js")
+  module.exports = calculateSum;
+  ```
 
-    var ans = calculateSum(20,50);
+  - **app.js**:
 
-    console.log(ans); // 70
-    ```
+  ```js
+  const calculateSum = require("./sum.js");
 
-- If there are multiple function and variable the you want to export from a module, than wrap all inside an obejct ot create a object and export it.
-    - **sum.js**:
-    ```js
-    function calculateSum(a, b){
-        return a+b;
-    }
+  var ans = calculateSum(20, 50);
 
-    var name = "Lenovo";
+  console.log(ans); // 70
+  ```
 
-    //* When you have multiple functions and variables
-    module.exports = {
-        name: name,
-        calculateSum: calculateSum
-    };
-    ```
-    - also you can export like:
-    ```js
-    module.exports = { name, calculateSum }
-    ```
-    - **app.js**: if you don't write `.js` extension, it will work perfectly.
-    ```js
-    const obj = require("./sum")
+- If there are multiple function and variable the you want to export from a module, than wrap all inside an obejct or create a object and export it.
 
-    var ans = obj.calculateSum(20,50);
-    console.log(ans);
-    console.log(obj.name);
-    ```
-    - you can also import by destructuring, it provide better readability.
-    ```js
-    const { name, calculateSum } = require("./sum")
-    ```
+  - **sum.js**:
+
+  ```js
+  function calculateSum(a, b) {
+    return a + b;
+  }
+
+  var name = "Lenovo";
+
+  //* When you have multiple functions and variables
+  module.exports = {
+    name: name,
+    calculateSum: calculateSum,
+  };
+  ```
+
+  - also you can export like:
+
+  ```js
+  module.exports = { name, calculateSum };
+  ```
+
+  - **app.js**: if you don't write `.js` extension, it will work perfectly.
+
+  ```js
+  const obj = require("./sum");
+
+  var ans = obj.calculateSum(20, 50);
+  console.log(ans);
+  console.log(obj.name);
+  ```
+
+  - you can also import by destructuring, it provide better readability.
+
+  ```js
+  const { name, calculateSum } = require("./sum");
+  ```
 
 - **Why module protects their functions and variables?**
-    - Module protects their functions and vars to avoid confilcts with other function and variable.
-    - It also helps to avoid the overwriting of functions and variables.
+
+  - Module protects their functions and variables to avoid conflicts with other functions and variables.
+  - It also helps to avoid the overwriting of functions and variables.
 
 - **What inside module and module.exports?**
-    - **module**: It is a global object which is available in every module. It contains information about the current module like **path**, **filename**, **exports** etc.
-    - **module.exports**: It is empty object there you can export functions, variables or objects.
+
+  - **module**: It is a global object which is available in every module. It contains information about the current module like **path**, **filename**, **exports** etc.
+
+  ```JS
+  console.log(module);
+  ```
+
+  Output:
+
+  ```js
+  {
+      id: '.',
+      path: 'd:\\Node',
+      exports: {},
+      filename: 'd:\\Node\\test.js',
+      loaded: false,
+      children: [],
+      paths: [
+          'd:\\Node\\node_modules',
+          'd:\\node_modules',
+          'd:\\node_modules'
+      ],
+      [Symbol(kIsMainSymbol)]: true,
+      [Symbol(kIsCachedByESMLoader)]: false,
+      [Symbol(kIsExecuting)]: true
+  }
+  ```
+
+  - **module.exports**: It is empty object there you can export functions, variables or objects.
+
+  ```js
+  console.log(module.exports);
+  // Output: {}
+  ```
 
 ## CommonJS module (CJS) VS ES6 module (ESM/MJS)
-- **CommonJS module (CJS)**: It uses `module.exports` to export functions, variables or objects and `require` to import them. These are enabled by default in Node.js. 
+
+- **CommonJS module (CJS)**: It uses `module.exports` to export functions, variables or objects and `require` to import them. These are enabled by default in Node.js.
 - **ES6 module (ESM)**: It is used in browser. It uses `export` to export functions, variables or objects and `import` to import them. To enable it in Node.js, you need to use `type="module"` in `package.json` file.
+
 ```json
 {
-    "type": "module"
+  "type": "module"
 }
 ```
 
 - **Example**:
-    - **sum.js**:
-    ```js
-    export function calculateSum(a, b){
-        return a+b;
-    }
 
-    export var name = "Lenovo";
-    ```
+  - **sum.js**:
 
-    - also you can export like
-    ```js
-    export { name, calculateSum };
-    ```
+  ```js
+  export function calculateSum(a, b) {
+    return a + b;
+  }
 
-    - **app.js**: here must write the `.js` extension.
-    ```js
-    import { name, calculateSum } from "./sum.js"
+  export var name = "Lenovo";
+  ```
 
-    var ans = calculateSum(20,50);
-    console.log(ans);
-    console.log(name);
-    ```
+  - also you can export like
 
-### Difference 
+  ```js
+  export { name, calculateSum };
+  ```
 
-| **CommonJS Module (CJS)** | **ES Module(MJS/ESM)** |
-| --- | --- |
-| `module.exports` and `require()` | `export` and `import` |
-| Enabled by default in Node.js | Enabled by using `type="module"` in `package.json` |
-| Used in `Node.js` | Used in `React.js`, `Angular.js`, etc. |
-| Used in Industry | Starndard |
-| Syncronous | Asyncronous |
-| Code run in non-strict mode | in strict mode |
-| Ex.: `z = 10` run without error | Ex.: `z = 10` throw error |
+  - **app.js**: here must write the `.js` extension.
 
+  ```js
+  import { name, calculateSum } from "./sum.js";
+
+  var ans = calculateSum(20, 50);
+  console.log(ans);
+  console.log(name);
+  ```
+
+### Difference
+
+| **CommonJS Module (CJS)**             | **ES Module(MJS/ESM)**                             |
+| ------------------------------------- | -------------------------------------------------- |
+| `module.exports` and `require()` used | `export` and `import` used                         |
+| Enabled by default in Node.js         | Enabled by using `type="module"` in `package.json` |
+| Used in `Node.js`                     | Used in `React.js`, `Angular.js`, etc.             |
+| Used in Industry                      | Standard                                           |
+| Synchronous                           | Asynchronous                                       |
+| Code run in non-strict mode           | in strict mode                                     |
+| Ex.: `z = 10` run without error       | Ex.: `z = 10` throw error                          |
 
 ## Module folder structure
+
 - **Problem**: let you have multiple modules and you want to keep them in a separate folder. How you can do this?
 - **Solution**: Create a folder and move all modules. Now create a `index.js` module which will import all modules and export them. Now you can import all modules using `require` or `import`.
-- Let you have `sum.js` and `mutiply.js`
-    - Create `calculation` folder, move [sum.js](./calculation/sum2.js) and [multiply.js](./calculation/multiply.js) inside it.
-    - **index.js**: 
-    ```js
-    const calculateSum2  = require("./sum2.js");
-    const multiply = require("./multiply.js");
+- Let you have `sum.js` and `multiply.js`
 
-    module.exports = { calculateSum2, multiply };
-    ```
+  - Create `calculation` folder, move [sum.js](./calculation/sum2.js) and [multiply.js](./calculation/multiply.js) inside it.
+  - **index.js**:
 
-    - **app.js**: There `./calculation` is denotes the folder where `index.js` is located, you not need to write `index.js`.
-    ```js
-    const { calculateSum2, multiply } = require("./calculation")
-    console.log("Sum 2 is: ", calculateSum2(21, 125));
-    console.log("Multi is: ", multiply(50, 20));
-    ```
+  ```js
+  const calculateSum2 = require("./sum2.js");
+  const multiply = require("./multiply.js");
+
+  module.exports = { calculateSum2, multiply };
+  ```
+
+  - **app.js**: There `./calculation` is denotes the folder where `index.js` is located, you not need to write `index.js`.
+
+  ```js
+  const { calculateSum2, multiply } = require("./calculation");
+  console.log("Sum 2 is: ", calculateSum2(21, 125)); // 146
+  console.log("Multi is: ", multiply(50, 20)); // 1000
+  ```
 
 ### Why we follow this structure?
+
 - We follow this structure to keep our code clean, organized and group all related modules in a single folder.
 - Suppose you use these modules in **app.js** with a long path in require, but **app.js** don't need to understood file structure of your module.
+- By following the above structure, you can import all modules in a single line and also you can use destructuring to import them, doesn't need to write long path in require.
 
 ### Importing a JSON file
+
 You can import a json file by:
+
 ```js
 const data = require("./data.json");
 
 console.log(data);
+/* Output:
+ * {
+ *     "name": "Jai",
+ *     "age": 20,
+ *     "address": "India"
+ * }
+ */
 ```
 
 ## Built in modules in Node.js
-- **util**: The util module is a core module in Node.js that provides a variety of utility functions for debugging, formatting, and working with objects. Utility functions are internal tools used to maintain and debug code.
-    - **Example**:
-    ```js
-    const util = require("node:util");
-    // or
-    const util2 = require("util");
-    ```
-    - **util.format()**: It is used to format a string. It takes a string and arguments and returns a formatted string.
-    ```js
-    var txt = 'Congratulate %s on his %dth birthday!';
-    var result = util.format(txt, 'Linus', 6);
 
-    console.log(result);
-    ```
+- **util**: The util module is a core module in Node.js that provides a variety of utility functions for debugging, formatting, and working with objects. Utility functions are internal tools used to maintain and debug code.
+
+  - **Example**:
+
+  ```js
+  const util = require("node:util");
+  // or
+  const util2 = require("util");
+  ```
+
+  - **util.format()**: It is used to format a string. It takes a string and arguments and returns a formatted string.
+
+  ```js
+  var txt = "Congratulate %s on his %dth birthday!";
+  var result = util.format(txt, "Linus", 6);
+
+  console.log(result); // Congratulate Linus on his 6th birthday!
+  ```
+- **fs**: The fs module is a core module in Node.js that provides an API for interacting with the file system. It allows you to read, write, and manipulate files and directories on your computer.
+
+  - **Example**:
+
+  ```js
+  const fs = require("fs");
+  ```
+  - `fs` module methods: `fs.readFile()`, `fs.writeFile()`, `fs.mkdir()`, `fs.rmdir()`, `fs.readdir()`, `fs.rename()` etc.
 

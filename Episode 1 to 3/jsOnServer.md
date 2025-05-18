@@ -1,3 +1,5 @@
+# Episode-02 | JS on Server
+
 ## **Server**
 
 Server is a `remote` computer that receives `request` and `response back`. It is always connected to the `internet`. It is used to store `data` and `run` applications.
