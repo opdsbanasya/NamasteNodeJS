@@ -27,7 +27,7 @@ V8 engine a JavaScript engine developed by Google for the Chrome browser. It is 
 Suppose you have a JS code, when this code given to V8, There are saveral steps to execute the code:
 1. **Parsing**: There are 2 steps:
     - **Lexical Analysis**: Code broken down into tokens i.e. small pieces. It also know as **Tokenization**. Ex. `var a = 10;` will be broken down into `var`, `a`, `=`, `10`, `;`.
-    - **Syntax Analysis**: A abstract syntax tree is created from the tokens. It is a tree representation of the code. This is also known as **Syntax Parsing**, and this whole step known as **Parsing** becuase of syntax parcing.
+    - **Syntax Analysis**: A abstract syntax tree(`AST`) is created from the tokens. It is a tree representation of the code. This is also known as **Syntax Parsing**, and this whole step known as **Parsing** becuase of syntax parcing.
     - [**AST Explorer**](https://astexplorer.net/): It a tool there you can see the AST of your code.
     - When JS engine unable to convert your code into AST, it will throw a syntax error.
 
@@ -43,11 +43,11 @@ Suppose you have a JS code, when this code given to V8, There are saveral steps 
         - `sum(41, 12)`: It again executed very fast.
         - `sum('k', 'l')`: Now you pass `char` into `sum()` function, there optimization will fail, because Turbofan optimize `sum()` function for `numbers`, but here you pass `char`, then Turbofan realize that I optimize to code for `number`, but there are `char`, my optization might be incorrect. Now it will deoptimize the code to Ignition that convert code into machine code and it executed.
     - There are also **Inline chache**, and **Copy Eusion**. So read about it.
-    - There was the **CrankShaft compiler** in the old version of V8 engine, but now it has been replaced by Turbofan.
+    - There was the **CrankShaft compiler** in the old version of V8 engine, but now it has been replaced by **Turbofan**.
 
 ![V8 Engine](./images/v8-working.png)
 
-3. **Garbage Collocton**: There is also another job that is Garbage Collection done by V8 in parallel. There are following type of Garbage Collectors
+3. **Garbage Collection**: There is also another job that is Garbage Collection done by V8 in parallel. There are following type of Garbage Collectors
     - Orinoco
     - Oil Pan
     - Scanvenger

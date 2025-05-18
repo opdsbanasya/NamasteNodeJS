@@ -79,7 +79,7 @@ crypto.pbkdf2("paasword", "salt", 5000000, 50, "sha512", (err, key) => {
 - **Never use sync functions, because these block your main thread.**
 
 ## setTimeoutZero
-when you pass `0` ms to setTimeout, JS offloads it to libuv, because it is a async operatio. It have 0 ms, but still libuv can.t push into callback because libuv can **push a operation into callstack only when callstack is empty**, mean after that JS engine has been executed all code.
+when you pass `0` ms to setTimeout, JS offloads it to libuv, because it is a async operation. It have 0 ms, but still libuv can't push into callback because libuv can **push a operation into callstack only when callstack is empty**, mean after that JS engine has been executed all code.
 - [setTimeoutZero.js](./setTimeoutZero.js)
 
 ```js

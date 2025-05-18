@@ -13,7 +13,7 @@ google.com <----> Server
 
 ## **JS engine**
 
-- In `node.js`, there is a used `V8 engine`, which is written in `C++`.
+- In `node.js`, there is `V8 engine` used, which is written in `C++`.
 - The V8 engine was developed by `Google` and is used in `Google Chrome`.
 - It is an open-source high-performance `JavaScript` and `WebAssembly` engine, used in Chrome and Node.js.
 - V8 engine can be `embedded` into any C++ application.
@@ -33,7 +33,7 @@ JavaScript code <----> V8 engine (C++) <----> Machine code
 ---------------------------------
 |           Server              |
 |  ---------------------------  |
-|  |  V8 engine (C++)         | |
+|  |  Node.js                 | |
 |  |  ---------------------   | |
 |  |  |    V8 Engine      |   | |
 |  |  ---------------------   | |
@@ -48,3 +48,4 @@ JavaScript code <----> V8 engine (C++) <----> Machine code
 ### **What does a V8 engine do, and why is it in C++?**
 
 We understand JS code, and the V8 engine takes that code and converts it into machine code that can be executed by the computer.
+| There we will see the whole process of how the V8 engine works in next few episodes.
