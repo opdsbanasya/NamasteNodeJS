@@ -50,9 +50,14 @@ Hello Sanjay Kumar
    - In Node.js, the global object is named `global`. Unlike browsers, Node.js does not have a `window` object.
 
     ```javascript
-    console.log(global); // It will print the global object
-    console.log(this); // It will print an empty object
+      console.log(global); // It will print the global object
+      console.log(this); // It will print an empty object
     ```
 
 3. **Introduction of `globalThis`**:
    - To standardize the global object across different JavaScript environments (like browsers and Node.js), the `globalThis` object was introduced. It provides a consistent way to access the global object, regardless of the environment.
+   ```bash
+   $ node
+   > console.log(globalThis);
+   { global: [Circular], clearImmediate: [Function: clearImmediate], ... }
+   ```
