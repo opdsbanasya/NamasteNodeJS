@@ -1,4 +1,4 @@
-# libuv and async I/O
+# Episode-06 | libuv & async IO
 
 - **Node.js has an event-driven architecture capable of asynchronous I/O.** What does that mean?
 
@@ -106,13 +106,42 @@
 | Ex. `var name = "Rahul"` | Ex. `fs.readFile('file.txt', function(err, data) {})` |
 
 ### Synchronous and Asynchronous Code
-![Sync and Async Code](./images/sync-async-code.png)
+- **Synchronous code**:
+  ```js
+  // Synchronous
+  var a = 100;
+  var b = 205;
+
+  function multiply(a, b){
+      return a*b;
+  }
+
+  console.log(multiply(a,b)); // 20500
+  ```
+
+- **Asynchronous code**:
+  ```js
+  const https = require('https');
+  const fs = require('fs');
+
+  https.get("https://api.xyz.com", (res)=>{
+      console.log("Data from xyz APIs", res.data);
+  });
+
+  fs.readFile("./dev.txt", (data)=>{
+      console.log("Data from dev.txt file: ", data);
+  });
+
+  setTimeout(() => {
+      console.log("Call it after 5 second");
+  }, 5000);
+  ```
 
 ### How is synchronous code executed?
 In JS engine following componet is responsible for executing the code:
 - **Callstack**: JS engine have a Callstack that running on a single thread.
 - **Memory Heap**: There also a Memory Heap that allocate memory to variables and functions.
-- **Garbage Collector**: There is also a Garbage Collector that cleat the unused memory and collect it.
+- **Garbage Collector**: There is also a Garbage Collector that clear the unused memory and collect it.
 
 - Whenever you run the code, a **Global Execution Context** is created, and it is pushed to the Callstack. There memory allocation and garbage collection done in parallel. When you call a function, an another **Function Execution Context** is created and pushed to the Callstack. When the function is executed, it is popped from the Callstack. Ones the code is executed completely, the **Global Execution Context** is popped from the Callstack.
 

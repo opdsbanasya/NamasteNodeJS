@@ -16,9 +16,9 @@ There are 2 type of languages:
 There are 2 main components of Node.js:
 - V8 engine
 - libuv
-There also other components like modules, etc.
+- There also other components like modules, etc.
 
-![node-arch](./images/node-arch.png)
+<img src="./images/node-arch.png" alt="node-arch" style="width:600px" />
 
 ## V8 engine
 V8 engine a JavaScript engine developed by Google for the Chrome browser. It is written in C++ and used in Chrome and Node.js. It is open-source and can run standalone, or can be embedded into any C++ application.
@@ -45,7 +45,7 @@ Suppose you have a JS code, when this code given to V8, There are saveral steps 
     - There are also **Inline chache**, and **Copy Eusion**. So read about it.
     - There was the **CrankShaft compiler** in the old version of V8 engine, but now it has been replaced by **Turbofan**.
 
-![V8 Engine](./images/v8-working.png)
+<img src="./images/v8-working.png" alt="node-arch" style="width:400px" />
 
 3. **Garbage Collection**: There is also another job that is Garbage Collection done by V8 in parallel. There are following type of Garbage Collectors
     - Orinoco

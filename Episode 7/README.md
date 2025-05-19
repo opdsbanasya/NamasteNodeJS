@@ -1,4 +1,4 @@
-# Sync, Async and setTimeoutZero
+# Episode-07 | Sync, Async and setTimeoutZero
 
 ## Synchronous Code
 Sync code is simple JS there code executes line by line. It is blocking operation, and not good for I/O operations.
@@ -38,7 +38,7 @@ https.get("https://dummyjson.com/products/1", (res)=>{
 })
 ```
 
-- Whenever you run this code it exwcites in following order:
+- Whenever you run this code it executes in following order:
     - There you got first access to file system and https request, these are core modules of node.js.
     - Now JS engine comes to next and there is a read file operation, so it offloads this operation to libuv, now to JS engine is free to execute next line and libuv does the read file operation and will notify JS engine once it is done.
     - There is a setTimeout function, so JS engine will offload this operation to libuv and will notify JS engine once it is done.
@@ -55,7 +55,7 @@ If there `Sync` in the function name, it means it is synchronous function, and i
 | Non-blocking to main thread | Blocking to main thread |
 | Offloads to libuv, but getting data in async way | Reads data in sync way |
 | Callback function | Returns data |
-| No concept of callback function | Concept of callback function |
+| Concept of callback function | No concept of callback function |
 
 - **Main Thread**: Thread that executes JS code.
 
