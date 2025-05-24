@@ -8,7 +8,7 @@ In libuv, there are 3 main components:
 - Callback Queue
 - Thread Pool
 
-![libuv](./images/libuv-arch.png)
+<img src="./images/libuv-arch.png" alt="libuv" width="600"/>
 
 ### Callback Queue
 Suppose the data comes back very fast, and JS engine still busy to runnning JS code, then the callback function of async I/O waiting in **Callback Queue** inside libuv till callstack not empty of V8. If there are an API call, a read file, and also a `setTimeout`. Suppose all comes back at same time then libuv maintain a callback queue and all async I/O callback wait in their respected queue, if there JS engine is busy.
@@ -28,7 +28,7 @@ Event loop runs in a loop. There are phases in event loop:
     - `process.nextTick()`
     - `Promise.resolve()`
 
-![Event Loop](./images/event-loop-working.png)
+<img src="./images/event-loop-working.png" alt="Event Loop" width="600"/>
 
 #### Outer Cycle
 1. **Timer Phase**: Initially event loop is in timer phase. There all the callbacks which are set by `setTimeout` or `setInterval` are executed in this phase. Event loop check there is some callbacks associated with timer. Suppose if the timer has expired, now the callback waiting into timer queue. Event loop first prioritize the timer callbacks and push them to callstack. After that it move to the poll phase.
@@ -51,7 +51,9 @@ Before every phase event loop follow an inner cycle:
     - Both executed before the next phase.
     - It is like a priority cycle.
 
-    ![Inner Cycle](./images/inner-cycles.png)
+
+<img src="./images/inner-cycles.png" alt="Inner Cycle" width="600"/>
+
 
 ### Q. In ideal case, in which phase event loop waits for the  task that running?
 Suppose there is nothing in callback queue, but still file reading is going on that was the phase, callback is empty mean event loop is in ideal state, then it **waits in poll phase**, when something comes in callback queue, it start execution again. It also known as **Semi-infinite loop**.
@@ -104,24 +106,23 @@ File read.
 - [Example 3](./ex3.js)
 - [Example 4](./ex4.js)
 - [Example 5](./ex5.js)
-  - *Output*:
-    ```bash
-    $ node ex5.js
-    a =  120
-    Last Line
-    process.nextTick
-    Promise
-    setTimeout
-    setImmediate
-    setImmediate
-    Secret data:  This is secret file.
-    inner process.nextTick
-    inner setImmediate
-    inner setTimeout
-    again Secret data: This is secret file.
-    ```
-    - *Explanation*:
-      - At inner `nextTick`, there is a file reading opearation that take some time to read file, so even loop goes to next phase that is Check phase and there is a inner `setImmediate`, so it executed first. then inner `setTimeout` and then again file reading operation.
+    - *Output*:
+        ```bash
+        $ node ex5.js
+        a =  120
+        Last Line
+        process.nextTick
+        Promise
+        setTimeout
+        setImmediate
+        setImmediate
+        Secret data:  This is secret file.
+        inner process.nextTick
+        inner setImmediate
+        inner setTimeout
+        again Secret data: This is secret file.
+        ```
+    - **Explanation**: At inner `nextTick`, there is a file reading opearation that take some time to read file, so even loop goes to next phase that is Check phase and there is a inner `setImmediate`, so it executed first. then inner `setTimeout` and then again file reading operation.
 
 ### Other 2 phases of Event loop
 There are 2 more phases of event loop between timer and poll phase:
