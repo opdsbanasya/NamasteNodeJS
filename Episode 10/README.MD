@@ -79,16 +79,15 @@ Hardware => Karnel => Process
 
 ## Homework
 Read about more following topics
-- How epoll and kqueue works? Also read about Data Structure of both.
-- File Descripter
-- Event emiters & listeners
-- Streams & Buffer
-- Pipes
-- Red Black Tree
-- `process.nextTick()` & `setImmediate()`
-- Timer uses Min Heap Data Structure
+- [How epoll and kqueue works? Also read about Data Structure of both.](./homework.md#epoll-vs-kqueue)
+- [File Descripter](./homework.md#file-descriptor-fd)
+- [Event emiters & listeners](./homework.md#event-emitters--listeners)
+- [Streams & Buffer](./homework.md#streams--buffers)
+- [Pipes](./homework.md#pipes)
+- [`process.nextTick()` & `setImmediate()`](./homework.md#processnexttick-vs-setimmediate)
+- [Timer uses Min Heap Data Structure](./homework.md#-timer--min-heap-data-structure)
 
----
+--- 
 
 ## Some learnings
 - Don't block the main thread.
