@@ -145,26 +145,26 @@ In JS engine following componet is responsible for executing the code:
 
 - Whenever you run the code, a **Global Execution Context** is created, and it is pushed to the Callstack. There memory allocation and garbage collection done in parallel. When you call a function, an another **Function Execution Context** is created and pushed to the Callstack. When the function is executed, it is popped from the Callstack. Ones the code is executed completely, the **Global Execution Context** is popped from the Callstack.
 
-![Sync Code Execution](./images/sync-code-execution.png)
+![Sync Code Execution](./images/sync-code-execution.webp)
 
 ### How asynchronous code is executed?
 - JS engine does not know how to wait, it not have the concept of timer. But with Node.js, it work and wait to complete the task. This is possible because Node.js give some superpowers to JS engine.
 
-![Async Code Execution](./images/async-code-execution.png)
+![Async Code Execution](./images/async-code-execution.webp)
 
 - Suppose you need to access a file that store in OS, then JS code talk to OS to access the file, but how?
 - There is **`libuv`** is make connection between JS engine and OS or Database. So, JS engine not talk direcly to OS, it talk to `libuv`, and `libuv` talk to OS, get the response and hand over to JS engine.
 
-![libuv](./images/libuv2.png)
+![libuv](./images/libuv2.webp)
 
 - JS engine offloads all asynchronous task to libuv.
 
-![jsengine](./images/jsengine-offloads.png)
+![jsengine](./images/jsengine-offloads.webp)
 
 ## **libuv**: 
 - libuv is a multi-platform C library that provides support for asynchronous I/O based on event loops, it makes async I/O simple.
 - **libuv** is like a **Superhero** that manage superpowers of Node.js.
 - libuv is a very core thing in Node.js, it is responsible for handling the async I/O operations.
 
-![libuv](./images/libuv.png)
+![libuv](./images/libuv.webp)
 
