@@ -7,10 +7,10 @@
 
 ### Hardware
 - So, if somebody say **deploy your app to a server**, it is reffering to a hardware in that CPU that have RAM, Storage, Processor, etc. and running an OS. 
-- It is kind of, **we running a application on OS and application does something that app can serve the client who wants to connect to a server.**
-- To access data that store on this server(CPU) from outside world we need a way to make a connection, we need an app.
-- For example, you creating a server on AWS, mean Amazon managing hardware and give rsources to you.
-- **ec2 instance**: There must be a CPU which is somewhere on the internet, there managed by AWS, we hired that CPU for oueself and we have deploy website on server.
+- It is kind of, **we running an application on OS and application does something that app can serve the client who wants to connect to a server.**
+- To access data that store on this server(CPU) from outside world, we need a way to make a connection, we need an app.
+- For example, you creating a server on AWS, mean Amazon managing hardware and give resources to you.
+- **`ec2` instance**: There must be a CPU which is somewhere on the internet, there managed by AWS, we hired that CPU for ourself and we have deploy website on server.
 
 #### Can we use our Laptop or CPU as a server?
 Yes, we can use our Laptop or CPU as a server, but there are some limitation:
@@ -23,7 +23,7 @@ Yes, we can use our Laptop or CPU as a server, but there are some limitation:
 | Can't access from outside world | Can access from outside world |
 
 ### Software
-Another is we create a server using software like **Node.js**, **Django**, etc., we creating a http server using these software means we creating an app that handle user requests and send response. So that app can call Server sometimes.
+Another is we create a server using software like **Node.js**, **Django**, etc., we creating a `http` server using these software means we **creating an app that handle user requests and send response**. So that app can call Server sometimes.
 
 ## Client Server Architecture
 - Suppose there is a user that want to access files from a server, How can it do that?
@@ -48,7 +48,7 @@ When you make a server request, data is not sent in one go, server send data in 
 - **Buffer**: Sending data in chunks
 - **TCP/IP**: Protocol to sending a data; control data transfer
 
-![data tranfer](./images/data%20transfer.png)
+![data tranfer](./images/data%20transfer.webp)
 
 ## Domain Name System(DNS)
 - Generally, we don't communicate with IPs, we use **Domain Name**. At the end, domain name maps to an IP.
@@ -56,7 +56,7 @@ When you make a server request, data is not sent in one go, server send data in 
 - Think IP as your geo-location and domain name as your verbal address.
 - When we request a URL `www.abc.com`, but before making an API call to `abc.com`, internally it makes call to DNS server.
 
-![dns](./images/dns.png)
+![dns](./images/dns.webp)
 
 ### Can we create multiple `http` servers?
 Yes, according your need you can means there `2` or more apps running, each `http` server ha their `PORT` that decide to which `http` server can take request. Commonly `PORT` is a 4 digit number.
@@ -76,7 +76,7 @@ Yes
     Web server => Frontend + API Server
     DB server => Backend Storage
     ```
-![differrent servers](./images/different%20server.png)
+![differrent servers](./images/different%20server.webp)
 
 ## Socket vs Web Socket
 Both Socket and WebSocket enable communication between devices, but they serve different purposes and work in different ways.
