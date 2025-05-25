@@ -4,8 +4,8 @@ MongoDB is a document-oriented NoSQL database used for high volume data storage.
 
 ## Way to use MongoDB
 
-1. Community Version: Download and install MongoDB on your own system. It is known as self-managed MongoDB.
-2. Cloud Version: Use MongoDB Atlas, a cloud-based MongoDB service. It is known as managed MongoDB. MongoDB on behalf of you, takes the DB, install it to server and give access to that playform to you.
+**1. Community Version**: Download and install MongoDB on your own system. It is known as self-managed MongoDB.
+**2. Cloud Version**: Use MongoDB Atlas, a cloud-based MongoDB service. It is known as managed MongoDB. MongoDB on behalf of you, takes the DB, install it to server and give access to that platform to you.
 
 ## MongoDB Atlas
 
@@ -21,15 +21,15 @@ MongoDB Atlas is a cloud-based MongoDB service that provides all the features of
    - Give cluster a name
    - Choose cloud provider and region
    - Click on the "Create Cluster" button.
-5. It gives you username and password to access the cluster.
+5. It gives you "username" and "password" to access the cluster.
 6. To use the cluster, you need a mongoDB connection string. You can get it by clicking on the "Connect" button:
    - Choose a connection method
    - Choose driver
    - It gives you a connection string. Copy it and use it in your application.
    - Or Choose Compass to connect to the cluster using MongoDB Compass.
-   - Create a js file store the connection string and use it in your application.
+   - Create a `.js` file store the connection string and use it in your application.
    ```js
-   const URI = "your connection string";
+   const URI = "YOUR CONNECTION STRING";
    ```
 
 ## How to access Cluter
@@ -82,7 +82,7 @@ async function main() {
 await collection.insertOne(data);
 
 // to insert multiple data
-await collection.insertMany([data]);
+await collection.insertMany([data1, data2]);
 ```
 
 - **Read**: Read data from the database.
@@ -97,7 +97,7 @@ console.log("All users: ", users);
 ```js
 await collection.updateOne(
   { number: "9685324858" },
-  { $set: { fisrtName: "Ramkesh", city: "Dausa" } }
+  { $set: { firstName: "Ram", city: "Dausa" } }
 );
 ```
 
@@ -110,7 +110,7 @@ await collection.deleteMany({ number: "9685324855" });
 - **Find all documents with filter**: return a cursor(pointer that references the documents of a collection) because you chain multiple operations.
 
 ```js
-const result = await collection.find({ fisrtName: "Ramkesh" });
+const result = await collection.find({ firstName: "Ram" });
 console.log(result);
 ```
 - **See [databse.js](./database.js) file for complete code**

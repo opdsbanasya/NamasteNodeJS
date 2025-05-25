@@ -12,7 +12,7 @@ async function main() {
 
   // todo: Create
   const data = {
-    fisrtName: "Sanjay",
+    firstName: "Sanjay",
     lastName: "Saini",
     city: "Jaipur",
     role: "Student",
@@ -34,7 +34,7 @@ async function main() {
   await collection.deleteMany({ number: "9685324855" });
 
   // todo: Indexing
-  const indexName = await collection.createIndex({ fisrtName: "Dharm Singh" });
+  const indexName = await collection.createIndex({ firstName: "Dharm Singh" });
   console.log("index name:", indexName);
 
   // todo: find all docs with filter
