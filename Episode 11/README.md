@@ -40,7 +40,7 @@ Another is we create a server using software like **Node.js**, **Django**, etc.,
     - `SMTP`: Simple Mail Transfer Protocol
 - Web Server = HTTP Server
 
-![server2](./images/server%20as%20software.png)
+![server2](./images/server%20as%20software.webp)
 
 ### How data sent by server
 When you make a server request, data is not sent in one go, server send data in form of `chunks`(packets), It is like a **stream of chunks**.
@@ -127,4 +127,4 @@ server.listen(7777);
     - Manual Request Parsing Required
     - No Built-in Error Handling
     - No Built-in Security Features
-- Commonly we use `express.js` to make `http` server, it a Node.js web app framework
+- Commonly we use `express.js` to make `http` server, it a Node.js web app framework.
