@@ -3,6 +3,8 @@
 ## Software Development Life Cycle (SDLC)
 Software Development Life Cycle (SDLC) is a process used by the software industry to design, develop and test high quality softwares. The SDLC aims to produce a high-quality software that meets or exceeds customer expectations, reaches completion within times and cost estimates.
 
+---
+
 ### Waterfall Model
 The Waterfall Model is a sequential design process, often used in software development processes, in which progress is seen as flowing steadily downwards (like a waterfall) through multiple phases. Here are the phases of the waterfall model:
 
@@ -18,6 +20,8 @@ The Waterfall Model is a sequential design process, often used in software devel
 4. **Testing**: After the development is done, the product is tested by the Testing team. They check if the product is working as expected and if there are any bugs. They test the product manually and also use automated testing tools by writing test cases. Developers also write test cases for unit testing.
 5. **Deployment**: After the product is tested and all the bugs are fixed, it is deployed to the production environment. This is the phase where the product is made available to the users. This is done by DevOps team, they take care about server, database, etc.
 6. **Maintenance**: After the product is deployed, it is monitored for any issues. If there are any bugs or issues, they are fixed in this phase. This is an ongoing process and the product is continuously improved based on user feedback. The whole process is repeated for the next version of the product.
+
+---
 
 ## Monolith vs Microservices
 ### Monolith
@@ -60,12 +64,16 @@ Microservice is a software architecture there are multiple small services and ea
 | **Debugging** | Easy | Hard (Blame Game) |
 | **Dev Experience** | Bad | Good |
 
+---
+
 ## What happen in NamasteDev.com?
 NamasteDev.com have not lot of microservices, it have 3 microservice now, **student-app**, is student application which used by students to access the courses, it is written in Next.js. Another is **admin-app** written in React.js, it is used by admin to manage the courses. Also they have **Backend** written in Node.js, it is used to handle the API requests and database operations. They are also building **student-mobile-app** in React Native.
 
 ![architecture of NamasteDev.com](./assets/./arch-of-namastedev.png)
 
+---
+
 ## What are we going to build in devTinder?
 We are building 2 microservices in devTinder:
 - devTinder-frontend
-= devTinder-backend
+- devTinder-backend
