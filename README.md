@@ -5,6 +5,7 @@
 | _Remember one thing **`BE CURIOUS`**!_
 
 # Table of Content
+## Season 1: Introduction to Node.js
 - [Episode-01 | Introduction to Node.js](./Episode%201%20to%203/inroductionToNodejs.md)
 - [Episode-02 | JS on Server](./Episode%201%20to%203/jsOnServer.md)
 - [Episode-03 | Start Writing Code](./Episode%201%20to%203/startWritingCode.md)
@@ -18,3 +19,6 @@
 - [Episode-11 | Creating a Server](./Episode%2011/README.md)
 - [Episode-12 | Database - SQL and NoSQL](./Episode%2012/README.md)
 - [Episode-13 | Creating a Database](./Episode%2013/README.md)
+
+## Season 2: Node.js in Action
+- [Episode-01 | Microservices vs Monolith - How to Build a Project](./S02%20Episode%201/README.md)
