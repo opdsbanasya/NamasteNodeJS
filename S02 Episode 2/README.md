@@ -63,13 +63,13 @@ We use `REST API` for this project. REST (Representational State Transfer) is a 
 ### What all APIs we need for devTinder?
 | **Method** | **API Name** | **Description** |
 |------------|--------------|-----------------|
-| POST | /signup | Create a new user account |
-| POST | /login | Authenticate user and return token |
-| GET | /profile | Get user details by ID |
-| PUT | /profile | Update user details |
-| PATCH | /profile | Update user profile picture |
-| DELETE | /profile | Delete user account |
-| POST | sent-requests | ignored or interested in a connection request |
-| POST | review-requests | Accept or reject a connection request |
-| GET | connections | Get all connections of the user |
-| GET | requests | Get all connection requests sent/received by the user |
+| POST | `/signup` | Create a new user account |
+| POST | `/login` | Authenticate user and return token |
+| GET | `/profile` | Get user details by ID |
+| PUT | `/profile` | Update user details |
+| PATCH | `/profile` | Update user profile picture |
+| DELETE | `/profile` | Delete user account |
+| POST | `/sent-requests` | ignored or interested in a connection request |
+| POST | `/review-requests` | Accept or reject a connection request |
+| GET | `/connections` | Get all connections of the user |
+| GET | `/requests` | Get all connection requests sent/received by the user |
