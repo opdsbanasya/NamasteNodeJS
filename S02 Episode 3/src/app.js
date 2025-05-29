@@ -2,15 +2,15 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Namaste MERN");
-});
+// app.use("/", (req, res) => {
+//   res.send("Namaste MERN");
+// });
 
-app.get("/hello", (req, res) => {
+app.use("/hello", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/namaste", (req, res) => {
+app.use("/namaste", (req, res) => {
   res.send("Namaste World!");
 });
 

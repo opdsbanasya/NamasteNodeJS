@@ -68,7 +68,22 @@ Here we configure to always respond our server. So, you can access by any url li
 
 ### Handling different requests
 
-To handling different requests use `app.get()` it focused only get requests and keep a route on request handler as first parameter.
+If you set `/` route with other and you are using `app.use()` then it match only `/` and allow all routes and give same response.
+```JavaScript
+app.use("/", (req, res) => {
+  res.send("Hello World!");
+});
+app.use("/hello", (req, res) => {
+  res.send("Hello World!");
+});
+app.use("/Jai", (req, res) => {
+  res.send("Jai World!");
+});
+
+//  If you access http://localhost:3000/hello or http://localhost:3000/Jai, it will still respond with "Hello World!".
+```
+
+So, to handling different requests use `app.get()` it focused only get requests and keep a route on request handler as first parameter.
 
 ```JavaScript
 app.get("/", (req, res) => {
