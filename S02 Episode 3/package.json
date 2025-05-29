@@ -1,0 +1,17 @@
+{
+  "name": "s03-episode-3",
+  "version": "1.0.0",
+  "description": "First of all, you need to define the configurations of project. Run the following command in your terminal:\r ```bash\r npm init",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
