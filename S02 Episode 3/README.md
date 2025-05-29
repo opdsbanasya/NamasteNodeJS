@@ -56,6 +56,7 @@ app.listen(3000, () => {
 ---
 
 ## Handling requests
+Callback function that passed to `app.listen()` is known as a **request handler**. It is executed when the server starts listening for incoming requests.
 
 ```JavaScript
 app.use((req, res)=>{

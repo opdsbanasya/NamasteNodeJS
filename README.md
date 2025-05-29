@@ -22,3 +22,5 @@
 
 ## Season 2: Node.js in Action
 - [Episode-01 | Microservices vs Monolith - How to Build a Project](./S02%20Episode%201/README.md)
+- [Episode-02 | Features, HLD, LLD & Planning](./S02%20Episode%202/README.md)
+- [Episode-03 | Creating our Express server](./S02%20Episode%203/README.md)
