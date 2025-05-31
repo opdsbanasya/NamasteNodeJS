@@ -30,3 +30,10 @@ app.patch("/user", (req, res)=>{
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
+
+// String Patterns in Routing
+app.get("/^\/ab[0-9]+c$/", (req, res)=>{
+  console.log("responded");
+  res.send({name: "Pratik", city: "Jaipur"});
+})
+// http://localhost:3000/ab2
