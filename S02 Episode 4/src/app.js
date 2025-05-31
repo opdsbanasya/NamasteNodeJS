@@ -11,9 +11,9 @@ app.get("/user", (req, res)=>{
   res.send({name: "Pratik", city: "Jaipur"});
 })
 
-app.post("/user", (req, res)=>{
-  res.send("User data saved to DB");
-})
+// app.post("/user", (req, res)=>{
+//   res.send("User data saved to DB");
+// })
 
 app.delete("/user", (req, res)=>{
   res.send("User account deleted");
@@ -37,3 +37,12 @@ app.get("/^\/ab[0-9]+c$/", (req, res)=>{
   res.send({name: "Pratik", city: "Jaipur"});
 })
 // http://localhost:3000/ab2
+
+// todo: Query Parameters
+app.post("/user", (req, res)=>{
+  console.log(req.query)
+  // logic to save data
+
+  res.send("Data saved successfully in database");
+})
+// API: http://localhost:3000/user?name=AjaySingh&email=ajay@gmail.com
