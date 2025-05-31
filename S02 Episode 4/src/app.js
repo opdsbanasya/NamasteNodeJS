@@ -46,3 +46,9 @@ app.post("/user", (req, res)=>{
   res.send("Data saved successfully in database");
 })
 // API: http://localhost:3000/user?name=AjaySingh&email=ajay@gmail.com
+
+// todo Dynamic routing
+app.get("/user/:userId", (req, res)=>{
+  console.log(req.params);
+  res.send(`user with ${req.params.userId} have successfully login`)
+})
