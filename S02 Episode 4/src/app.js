@@ -52,3 +52,4 @@ app.get("/user/:userId", (req, res)=>{
   console.log(req.params);
   res.send(`user with ${req.params.userId} have successfully login`)
 })
+// API: http://localhost:3000/user/6512
