@@ -24,3 +24,4 @@
 - [Episode-01 | Microservices vs Monolith - How to Build a Project](./S02%20Episode%201/README.md)
 - [Episode-02 | Features, HLD, LLD & Planning](./S02%20Episode%202/README.md)
 - [Episode-03 | Creating our Express server](./S02%20Episode%203/README.md)
+- [# Episode-04 | Routing and Request Handlers](./S02%20Episode%204/README.md)

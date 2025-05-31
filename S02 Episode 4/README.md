@@ -47,17 +47,19 @@ Now, there API doesn't work for random HTTP methods.
 
 ---
 
-## Logic behind routes
-- **/ab`?`c**: Here `?` means that the `b` is optional. So, it will match both `/abc` and `/ac`.
-- **/ab`+`c**: Here `+` means that the `b` can appear one or more times. So, it will match `/abc`, `/abbc`, `/abbbc`, etc.
-- **/ab`*`cd**: Here `*` means route should be start with `ab` and end with `cd` and anything can be in between. So, it will match `/abcd`, `/abxyzcd`, `/ab123cd`, etc.
-- **/a(bc)`?`d**: Also you can group things wrapping by `()`. Here `?` means that the `bc` is optional. So, it will match both `/ad` and `/abcd`.
-- **REGEX Expression**: You can also use regular expressions to match routes. For example, you can use `/ab[0-9]+c` to match any route that starts with `ab`, followed by one or more digits, and ends with `c`.
-- **/ab`$`**: Here `$` means that the route should end with `ab`. So, it will match `/ab`, `/cab`, `/123ab`, etc.
-- **/ab`^`c**: Here `^` means that the route should start with `ab`. So, it will match `/abc`, `/ab123`, `/abxyz`, etc.
-- **/ab`{n}`c**: Here `{n}` means that the `b` should appear exactly `n` times. So, it will match `/abc`, `/abbc`, but not `/abbbc`.
-- **/ab`{n,}`c**: Here `{n,}` means that the `b` should appear at least `n` times. So, it will match `/abc`, `/abbc`, `/abbbc`, etc.\
-- **/ab`{n,m}`c**: Here `{n,m}` means that the `b` should appear at least `n` times and at most `m` times. So, it will match `/abc`, `/abbc`, but not `/abbbc`.
+## String Patterns in Routing
+| **Pattern Symbol**  | **Description**                                                             | **Example Matches**                                 |
+|---------------------|-----------------------------------------------------------------------------|-------------------------------------------------|
+| `/ab?c`             | `?` means `b` is optional.                                                  | `/abc`, `/ac`                                   |
+| `/ab+c`             | `+` means `b` appears one or more times.                                    | `/abc`, `/abbc`, `/abbbc`                       |
+| `/ab*cd`            | `*` means any characters (including none) between `ab` and `cd`.            | `/abcd`, `/abxyzcd`, `/ab123cd`                 |
+| `/a(bc)?d`          | `()` groups `bc`, `?` makes group optional.                                 | `/ad`, `/abcd`                                  |
+| `/ab[0-9]+c`        | Regex: one or more digits between `ab` and `c`.                             | `/ab1c`, `/ab123c`                              |
+| `/ab$`              | `$` means route ends with `ab`.                                             | `/ab`, `/cab`, `/123ab`                         |
+| `/^abc`             | `^` means route starts with `abc`.                                          | `/abc`, `/abcd`, `/abc123`                      |
+| `/ab{n}c`           | `{n}` means `b` appears exactly `n` times.                                  | `/abc` (if n=1), `/abbc` (if n=2)               |
+| `/ab{n,}c`          | `{n,}` means `b` appears at least `n` times.                                | `/abbc`, `/abbbc` (if n=2)                      |
+| `/ab{n,m}c`         | `{n,m}` means `b` appears at least `n` and at most `m` times.               | `/abbc` (if n=2, m=2), `/abbbc` (if n=2, m=3)   |
 
 ---
 
