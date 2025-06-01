@@ -150,7 +150,7 @@ app.get("/user", (req, res) => {
 
 Middleware functions are functions that not sending a response directly, but they can modify the request and response objects, end the request-response cycle, or call the next middleware function in the stack. They are executed sequentially in the order they are defined.
 
-![Middleware Flow](https://www.scaler.com/topics/images/middleware-in-nodejs-1.webp)
+![Middleware Flow](./middleware-in-nodejs-1.webp)
 
 ```javascript
 app.use(
