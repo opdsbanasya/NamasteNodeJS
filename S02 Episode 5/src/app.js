@@ -4,7 +4,13 @@ const { adminAuth, userAuth } = require("./middlewares/auth");
 const app = express();
 
 app.use("/admin", adminAuth);
-app.use("/user", userAuth);
+// app.use("/user", userAuth);
+
+app.use("/", (err, req, res, next) => {
+  if(err){
+    res.status(404).send("Something went wrong");
+  }
+});
 
 app.get("/admin/getAllUsers", (req, res) => {
   console.log("Giving all user data access...");
@@ -31,14 +37,22 @@ app.use(
 );
 */
 
-app.get("/user/profile", (req, res)=>{
-  console.log(`Giving access to ${req.query.username} profile...`);
-  res.send(`User ${req.query.username} profile!!`);
-})
+app.get("/user/profile", (req, res) => {
+  // try {
+    // DB logic
+    throw new Error("Ramdom error");
+    res.send(`User ${req.query.username} profile!!`);
+  // } catch (err) {
+  //   res.status(401).send("Some error occured!!!");
+  // }
+});
 
-
+app.use("/", (err, req, res, next) => {
+  if(err){
+    res.status(403).send("Something went wrong");
+  }
+});
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
-
