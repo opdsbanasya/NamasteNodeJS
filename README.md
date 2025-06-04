@@ -28,3 +28,4 @@
 - [Episode-05 | Middlewares and Error Handling](./S02%20Episode%205/README.md)
 - [Episode-06 | Database, Schema, and Models in Mongoose](./S02%20Episode%206/README.md)
 - [Episode-07 | Diving deep into API](./S02%20Episode%207/README.md)
+- [Episode-08 | Data Sanitization and Validation](./S02%20Episode%208/README.md)
