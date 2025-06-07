@@ -30,3 +30,4 @@
 - [Episode-07 | Diving deep into API](./S02%20Episode%207/README.md)
 - [Episode-08 | Data Sanitization and Validation](./S02%20Episode%208/README.md)
 - [Episode-09 | Encrypting Passwords with `bcrypt`](./S02%20Episode%209/README.md)
+- [Episode-10 | Cookies, JWT, and Authentication](./S02%20Episode%2010/README.md)
