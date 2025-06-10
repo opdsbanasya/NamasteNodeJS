@@ -32,3 +32,4 @@
 - [Episode-09 | Encrypting Passwords with `bcrypt`](./S02%20Episode%209/README.md)
 - [Episode-10 | Cookies, JWT, and Authentication](./S02%20Episode%2010/README.md)
 - [Episode-11 | Diving into the API's and Express Router](./S02%20Episode%2011/README.md)
+- [Episode-12 | Logical Database Query & Compound Indexing](./S02%20Episode%2012/README.md)
