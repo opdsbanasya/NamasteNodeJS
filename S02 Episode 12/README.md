@@ -264,3 +264,5 @@ const userSchema = new mongoose.Schema({
 connectionRequestSchema.index({ fromUserId: 1, toUserId: 1 }, { unique: true });
 ```
 Here, `1` indicates ascending order. If you want to create a descending index, you can use `-1`.
+    
+> For more details, refer to the [MongoDB Indexes documentation](https://www.mongodb.com/docs/manual/indexes/).
