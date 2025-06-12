@@ -34,3 +34,4 @@
 - [Episode-11 | Diving into the API's and Express Router](./S02%20Episode%2011/README.md)
 - [Episode-12 | Logical Database Query & Compound Indexing](./S02%20Episode%2012/README.md)
 - [Episode-12 | Ref, Populate and through process of writing APIs](./S02%20Episode%2013/README.md)
+- [Episode-14 | Building GET `/feed` API and Adding Pagination](./S02%20Episode%2014/README.md)
