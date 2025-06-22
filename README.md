@@ -39,3 +39,4 @@
 
 ## Season 3: Deployment and Scaling
 - [Episode-01 | Deploying Frontend on AWS EC2](./S03%20Episode%201/README.md)
+- [Episode-02 | Deploying Backend](./S03%20Episode%202/README.md)
