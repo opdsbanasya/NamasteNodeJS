@@ -36,3 +36,6 @@
 - [Episode-12 | Ref, Populate and through process of writing APIs](./S02%20Episode%2013/README.md)
 - [Episode-14 | Building GET `/feed` API and Adding Pagination](./S02%20Episode%2014/README.md)
 - [Episode-15 | DevTinder UI](./S02%20Episode%2015-19/README.md)
+
+## Season 3: Deployment and Scaling
+- [Episode-01 | Deploying Frontend on AWS EC2](./S03%20Episode%201/README.md)
