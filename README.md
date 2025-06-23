@@ -40,3 +40,5 @@
 ## Season 3: Deployment and Scaling
 - [Episode-01 | Deploying Frontend on AWS EC2](./S03%20Episode%201/README.md)
 - [Episode-02 | Deploying Backend](./S03%20Episode%202/README.md)
+- [Episode-03 | Adding Custom Domain Name](./S03%20Episode%203/README.md)
+- [Episode-04 | Sending Emails using AWS Simple Email Service (SES)](./S03%20Episode%204/README.md)
