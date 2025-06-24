@@ -42,3 +42,5 @@
 - [Episode-02 | Deploying Backend](./S03%20Episode%202/README.md)
 - [Episode-03 | Adding Custom Domain Name](./S03%20Episode%203/README.md)
 - [Episode-04 | Sending Emails using AWS Simple Email Service (SES)](./S03%20Episode%204/README.md)
+- [Episode-05 | Keeping our credentials safe](./S03%20Episode%205/README.md)
+- [Episode-06 | Scheduling Cron Job](./S03%20Episode%206/README.md)
