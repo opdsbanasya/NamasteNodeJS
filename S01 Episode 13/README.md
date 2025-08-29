@@ -4,8 +4,8 @@ MongoDB is a document-oriented NoSQL database used for high volume data storage.
 
 ## Way to use MongoDB
 
-**1. Community Version**: Download and install MongoDB on your own system. It is known as self-managed MongoDB.
-**2. Cloud Version**: Use MongoDB Atlas, a cloud-based MongoDB service. It is known as managed MongoDB. MongoDB on behalf of you, takes the DB, install it to server and give access to that platform to you.
+1. **Community Version**: Download and install MongoDB on your own system. It is known as self-managed MongoDB.
+2. **Cloud Version**: Use MongoDB Atlas, a cloud-based MongoDB service. It is known as managed MongoDB. MongoDB on behalf of you, takes the DB, install it to server and give access to that platform to you.
 
 ## MongoDB Atlas
 
@@ -32,7 +32,7 @@ MongoDB Atlas is a cloud-based MongoDB service that provides all the features of
    const URI = "YOUR CONNECTION STRING";
    ```
 
-## How to access Cluter
+## How to access Cluster
 
 ### 1. Using MongoDB Compass
 
