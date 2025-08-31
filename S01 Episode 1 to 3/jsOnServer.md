@@ -51,3 +51,14 @@ JavaScript code <----> V8 engine (C++) <----> Machine code
 
 We understand JS code, and the V8 engine takes that code and converts it into machine code that can be executed by the computer.
 | There we will see the whole process of how the V8 engine works in next few episodes.
+
+---
+
+<div class="flex justify-center gap-40 bg-gray-100 rounded-xl p-4">
+  <a href="./inroductionToNodejs.md" class="px-4 py-2 rounded-lg bg-white shadow hover:bg-gray-200">
+    Previous
+  </a>
+  <a href="./jsOnServer.md" class="px-4 py-2 rounded-lg bg-white shadow hover:bg-gray-200">
+    Next
+  </a>
+</div>
