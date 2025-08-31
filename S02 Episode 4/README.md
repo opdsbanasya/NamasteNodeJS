@@ -103,3 +103,7 @@ app.get("/user/:id", (req, res)=>{
 // URL: http://localhost:3000/user/123
 // You can access the dynamic parameter using `req.params`
 ```
+
+---
+
+[**Previous**](../S02%20Episode%203/README.md) | [**Next**](../S02%20Episode%205/README.md)

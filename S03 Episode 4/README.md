@@ -154,3 +154,9 @@ requestRouter.post(
 ```
 
 - You can make it dynamic by passing the `toAddress` and `fromAddress` as parameters to the `createSendEmailCommand` function. Find full code on [requestRouter.js](https://github.com/opdsbanasya/devTinder/blob/main/backend/src/routes/requestRouter.js#L6)
+
+---
+
+---
+
+[**Previous**](../S03%20Episode%203/README.md) | [**Next**](../S03%20Episode%205/README.md)

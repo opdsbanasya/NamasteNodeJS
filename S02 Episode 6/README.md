@@ -1,5 +1,16 @@
 # Episode-06 | Database, Schema, and Models in Mongoose
 
+## MongoDB Terminology
+
+1. **Cluster**: Cluster is a group of servers that work together to provide high availability and scalability for MongoDB i.e. if one servers goes down, another can take over.
+2. **Database**: Database is a logical container that holds collections of documents. Each database can have multiple collections. Meaning, a database is like a folder that contains all your data in an organized way.
+3. **Schema**: Schema is a bluprint that defines the structure of documents in a collection. It specifies the fields and their data types.
+4. **Model**: Model is an object that uses a schema to create, read, update, and delete documents in MongoDB. It acts as a bridge between the schema and the database.
+5. **Document**: Document is the basic unit of data in MongoDB, stored in a JSON-like format (BSON). One document represents a single record in a collection.
+6. **Fields**: Fields are the key-value pairs in a document that define the data. Each field has a name and a value, like "name": "Aarav", "age": 21.
+
+---
+
 ## Connecting database to our project
 
 First, we need to create a cluster in MongoDB Atlas and get the connection string. For this follow the [S01 Episode 13](../S01%20Episode%2013/README.md). After that follow the steps below:
@@ -131,3 +142,7 @@ app,post("/signup", async (req. res)=>{
     - `_id`: A unique identifier for the document.
     - `__v`: A version key to track the document version.
 - There, instead of dummy data, you can pass data with API request by query params
+
+---
+
+[**Previous**](../S02%20Episode%205/README.md) | [**Next**](../S02%20Episode%207/README.md)

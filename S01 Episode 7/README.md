@@ -95,4 +95,8 @@ console.log("Hello");
 */
 ```
 
-- It executes aftfer 0 ms, after callstack is empty.
+- It executes after 0 ms, after callstack is empty.
+
+---
+
+[**Previous**](../S01%20Episode%206/README.md) | [**Next**](../S01%20Episode%208/README.md)

@@ -55,3 +55,7 @@ app.post('/login', async (req, res) => {
 ```
 
 **NEVER** say **"Your username is incorrect"** or **"Your password is incorrect"**. Instead, always say **"Invalid username or password"**. This is a security measure to prevent attackers from guessing valid usernames or passwords.
+
+---
+
+[**Previous**](../S02%20Episode%208/README.md) | [**Next**](../S02%20Episode%2010/README.md)

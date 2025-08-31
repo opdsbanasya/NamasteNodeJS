@@ -143,3 +143,7 @@ email: {
 - `isURL`: Validates if a string is a valid URL.
 - `isStrongPassword`: Validates if a string is a strong password.
 - There are many more functions available in the `validator` library. You can check the [official documentation](https://www.npmjs.com/package/validator) for more details.
+
+---
+
+[**Previous**](../S02%20Episode%207/README.md) | [**Next**](../S02%20Episode%209/README.md)

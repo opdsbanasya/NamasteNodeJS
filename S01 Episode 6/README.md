@@ -168,3 +168,6 @@ In JS engine following componet is responsible for executing the code:
 
 ![libuv](./images/libuv.webp)
 
+---
+
+[**Previous**](../S01%20Episode%205/README.md) | [**Next**](../S01%20Episode%207/README.md)

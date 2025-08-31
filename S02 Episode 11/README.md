@@ -63,3 +63,7 @@ profileRouter.patch("/profile/edit", userAuth, async (req, res) => {
   }
 });
 ```
+
+---
+
+[**Previous**](../S02%20Episode%2010/README.md) | [**Next**](../S02%20Episode%2012/README.md)

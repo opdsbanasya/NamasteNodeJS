@@ -99,3 +99,5 @@ When module code wrapped inside IIFE, there module object is **passed as paramet
 - [require funtion](https://github.com/nodejs/node/blob/main/lib/internal/modules/cjs/loader.js#L1483)
 - [makeRequireFunction](https://github.com/nodejs/node/blob/main/lib/internal/modules/helpers.js#L127)
 - [wrap function](https://github.com/nodejs/node/blob/main/lib/internal/modules/cjs/loader.js#L345)
+
+[**Previous**](../S01%20Episode%204/README.md) | [**Next**](../S01%20Episode%206/README.md)

@@ -122,3 +122,7 @@ Follow these steps to deploy your frontend application on AWS EC2 instance:
 12. Click on **Add rule** and select **HTTP** from the dropdown. This will allow incoming traffic on port `80`.
 13. Click on **Save rules** to save the changes.
 14. Now, you can access your frontend application using the public IP address of your instance.
+
+---
+
+[**Previous**](../S02%20Episode%2015-19/README.md) | [**Next**](../S03%20Episode%202/README.md)

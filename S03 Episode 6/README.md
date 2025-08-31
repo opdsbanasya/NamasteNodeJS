@@ -62,3 +62,7 @@ endYesterday = endOfDay(yesterday);
 - If you have thousands of connection required milk you have thousands of females and this way is not good to stand emails it blocks out for when it is synchronous way.
 - The best way is use AWS SES bulk send email or you can set your own queue mechanism.
 - There is Package [**Bee-Queue**](https://www.npmjs.com/package/bee-queue) that provide queue mechanism that doesn't block your code.
+
+---
+
+[**Previous**](../S03%20Episode%205/README.md) | [**Next**](../S03%20Episode%207/README.md)

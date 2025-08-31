@@ -157,3 +157,6 @@ Versioning in `package.json` is done using semantic versioning (semver). The ver
 3. **`-g` flag**:
   - The `-g` flag ise used to install a package globally on your system.
 
+---
+
+[**Previous**](../S02%20Episode%202/README.md) | [**Next**](../S02%20Episode%204/README.md)

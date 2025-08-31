@@ -238,3 +238,7 @@ userSchema.methods.validatePasswordHash = async function(plainPasswordFromUser){
 ```javascript
 const isPasswordMatched = await user.validatePasswordHash(password);
 ```
+
+---
+
+[**Previous**](../S02%20Episode%209/README.md) | [**Next**](../S02%20Episode%2011/README.md)

@@ -10,6 +10,7 @@ First, you have to choose a domain provider. Here are some popular ones:
 - [Name.com](https://www.name.com/)
 - [Hostinger](https://www.hostinger.com/domains)
 - [.Tech Domains](https://get.tech/)
+- [Get free domain by college ID](#tech-domain)
 
 For this project I used Godaddy, follow these steps to add a custom domain name to your application:
 
@@ -62,10 +63,10 @@ To secure your domain with SSL, follow these steps:
 - Find the "Always Use HTTPS" option and enable it, this will redirect all HTTP requests to HTTPS.
 - Find the "Automatic HTTPS Rewrites" option and enable it, this will rewrite all HTTP links to HTTPS.
 
-## .Tech Domain
-Godady is not free, so I used [.tech domain](https://get.tech/) for this project. `.tech` domain is also not free, but I got it free for 1 year with the "GitHub Student Developer Pack". If you are a student, you can get it for free as well. Here are the steps to get it:
+## .Tech Domain 
+Godaddy is not free, so I used [.tech domain](https://get.tech/) for this project. `.tech` domain is also not free, but I got it free for 1 year with the "GitHub Student Developer Pack". If you are a student, you can get it for free as well. Here are the steps to get it:
 - Go to [GitHub Student Developer Pack](https://education.github.com/pack) page.
-- To redeam it, follow the [Sheryians Coding School Video](https://youtu.be/pq0k5OqnML4?feature=shared) YouTube Video or find it yourself
+- To redeem it, follow the [Sheryians Coding School Video](https://youtu.be/pq0k5OqnML4?feature=shared) YouTube Video or find it yourself
 - Sign up with your student email address.
 - Once you are verified, you will get access to the pack.
 - You will find a lot of free offers, including `.tech` domain.
@@ -73,3 +74,9 @@ Godady is not free, so I used [.tech domain](https://get.tech/) for this project
 - Signup with github account and verify your email address.
 - Your amount will becomes $0.00 and you can proceed to checkout.
 - Once you have purchased the domain, you can follow the same steps as above to set it up with Cloudflare.
+
+> Check Out my domain: [**devbandhan.tech**](https://devbandhan.tech)
+
+---
+
+[**Previous**](../S03%20Episode%202/README.md) | [**Next**](../S03%20Episode%204/README.md)

@@ -77,3 +77,7 @@ NamasteDev.com have not lot of microservices, it have 3 microservice now, **stud
 We are building 2 microservices in devTinder:
 - devTinder-frontend
 - devTinder-backend
+
+---
+
+[**Previous**](../S01%20Episode%2013/README.md) | [**Next**](../S02%20Episode%202/README.md)

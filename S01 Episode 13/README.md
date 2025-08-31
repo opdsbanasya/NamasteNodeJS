@@ -119,3 +119,7 @@ console.log(result);
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 - [MongoDB Compass](https://www.mongodb.com/products/compass)
 - [MongoDB npm API](https://mongodb.github.io/node-mongodb-native/Next/)
+
+--- 
+
+[**Previous**](../S01%20Episode%2012/README.md) | [**Next**](../S02%20Episode%201/README.md)

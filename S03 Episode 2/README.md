@@ -56,10 +56,10 @@ pm2 delete name
 
 ## Mapping port to IP/Domain
 
-let your frontend running on "http://42.33.33.20" and backend running on "http://42.33.33.20:3000". If you map your IP/domain to port then you can access your backend without specifying the port number.
+let your frontend running on **http://42.33.33.20** and backend running on **http://42.33.33.20:3000**. If you map your IP/domain to port then you can access your backend without specifying the port number.
 
-- frontend: "http://42.33.33.20"
-- backend: "http://42.33.33.20/api"
+- frontend: **http://42.33.33.20**
+- backend: **http://42.33.33.20/api**
 
 Follow the steps below to map your backend to the IP/domain:
 Edit the Nginx configuration file:
@@ -104,3 +104,7 @@ export const BASE_URL = "/api";
 - Build your project again and copy build to `/var/www/html` directory.
 - Now, your can access your frontend and backend by your IP address.
 - Frontend: "http://42.33.33.20"
+
+---
+
+[**Previous**](../S03%20Episode%201/README.md) | [**Next**](../S03%20Episode%203/README.md)

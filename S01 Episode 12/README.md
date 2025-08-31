@@ -115,3 +115,7 @@ Each type of database is designed to handle a different kind of data or a differ
 | Read-heavy apps, Transaction workloads | Real-time analytics, Distributed Computing |
 | MySQL, PostgreSQL | MongoDB, CouchDB |
 | Ex. Banking, E-commerce | Ex. Social Media, IoT |
+
+---
+
+[**Previous**](../S01%20Episode%2011/README.md) | [**Next**](../S01%20Episode%2013/README.md)

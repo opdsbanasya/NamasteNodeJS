@@ -60,3 +60,6 @@ const usersForFeed = await User.find({
   .skip(skipResults)
   .limit(results);
 ```
+
+
+[**Previous**](../S02%20Episode%2013/README.md) | [**Next**](../S02%20Episode%2015-19/README.md)

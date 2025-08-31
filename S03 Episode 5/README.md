@@ -67,7 +67,7 @@ npm install dotenv
 
 ---
 
-## `.gitignore` Entry\*\*
+## `.gitignore` Entry
 
 Don't forget to add `.env` in `.gitignore` file. This ensures your credentials stay secure and never get pushed to version control.
 
@@ -75,3 +75,7 @@ Don't forget to add `.env` in `.gitignore` file. This ensures your credentials s
 # Ignore .env files
 .env
 ```
+
+---
+
+[**Previous**](../S03%20Episode%204/README.md) | [**Next**](../S03%20Episode%206/README.md)

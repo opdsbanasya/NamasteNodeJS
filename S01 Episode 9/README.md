@@ -46,10 +46,10 @@ Event loop runs in a loop. There are phases in event loop:
 
 #### Inner Cycle
 Before every phase event loop follow an inner cycle:
-    - `process.nectTick()`: This is a way of handling operation, we can schedule callbacks using it.
-    - `Promise.resolve()`: Suppose we have a Promise and it resolved, noow there is a callback is executed, So promise callback executed here.
-    - Both executed before the next phase.
-    - It is like a priority cycle.
+- `process.nextTick()`: This is a way of handling operation, we can schedule callbacks using it.
+- `Promise.resolve()`: Suppose we have a Promise and it resolved, now there is a callback is executed, So promise callback executed here.
+- Both executed before the next phase.
+- It is like a priority cycle.
 
 
 <img src="./images/inner-cycles.png" alt="Inner Cycle" width="600"/>
@@ -142,3 +142,7 @@ It only used internally, we as a developer don't have to worry about it.
 - [Event loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
 - [I/O loop](https://docs.libuv.org/en/v1.x/loop.html)
 - [Event loop Code](https://github.com/libuv/libuv/blob/v1.x/src/unix/core.c#L427)
+
+---
+
+[**Previous**](../S01%20Episode%208/README.md) | [**Next**](../S01%20Episode%2010/README.md)

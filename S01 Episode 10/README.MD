@@ -3,7 +3,7 @@
 
 ![thread-pool](./images/thread-pool.png)
 
-- Suppose you want to read a file. you can't read file at main thread because it can block to main thread. So, it offloads to libuv, now libuv find a thread inside thread pool. It get a thread and runs the file system using this thread pool. During operation, this thread can't do another operation. When file read is dome, it gives back and has been free to do another task.
+- Suppose you want to read a file. you can't read file at main thread because it can block to main thread. So, it offloads to libuv, now libuv find a thread inside thread pool. It get a thread and runs the file system using this thread pool. During operation, this thread can't do another operation. When file read is done, it gives back and has been free to do another task.
 - In node.js there are size of thread is `4` by default, known as `UV-THREADPOOL_SIZE`.
 - Suppose there are 5 file reading opeartion request comes, the last request waits to empty thread, can't fullfil immediately.
 
@@ -91,10 +91,15 @@ Read about more following topics
 
 ## Some learnings
 - Don't block the main thread.
-    - sync mehtods
-    - heavy JSON object
+    - sync methods
+    - Heavy JSON object
     - Complex REGEX
     - Complex calculation
 - Data Structure is important
 - Naming is very Important
 - There's a lot to learn
+
+---
+
+
+[**Previous**](../S01%20Episode%209/README.md) | [**Next**](../S01%20Episode%2011/README.md)

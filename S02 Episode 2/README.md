@@ -73,3 +73,7 @@ We use `REST API` for this project. REST (Representational State Transfer) is a 
 | POST | `/review-requests` | Accept or reject a connection request |
 | GET | `/connections` | Get all connections of the user |
 | GET | `/requests` | Get all connection requests sent/received by the user |
+
+--- 
+
+[**Previous**](../S02%20Episode%201/README.md) | [**Next**](../S02%20Episode%203/README.md)

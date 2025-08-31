@@ -124,3 +124,7 @@ app.patch("/user", async (req, res) => {
   }
 })
 ```
+
+---
+
+[**Previous**](../S02%20Episode%206/README.md) | [**Next**](../S02%20Episode%208/README.md)
