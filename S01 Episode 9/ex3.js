@@ -6,7 +6,7 @@ setImmediate(()=> console.log("setImmediate"));
 
 Promise.resolve("Promise").then(console.log);
 
-fs.readFile("./data.txt", "utf8", (err, data)=>{
+fs.readFile("./data.txt", "utf-8", (err, data)=>{
     setTimeout(() => console.log("inner setTimeout"), 0);
 
     process.nextTick(() => console.log("inner process.nextTick"));
@@ -33,9 +33,9 @@ console.log("Last Line");
  * process.nextTick
  * Promise
  * setTimeout
- * setImmediate
  * Secret data: 
  * inner process.nextTick
- * inner setTimeout
+ * setImmediate
  * inner setImmediate
+ * inner setTimeout
  */

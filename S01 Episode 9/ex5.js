@@ -38,9 +38,9 @@ console.log("Last Line");
  * process.nextTick
  * Promise
  * setTimeout
- * setImmediate
  * Secret data:
  * inner process.nextTick
+ * setImmediate
  * inner setImmediate
  * inner setTimeout
  * again Secret data: 
